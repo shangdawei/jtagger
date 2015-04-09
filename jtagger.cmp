@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = Tue 07 Apr 2015 07:50:56 PM EDT
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = Thu 09 Apr 2015 10:08:26 AM EDT
 
 BeginCmp
 TimeStamp = /5525EF8E;
@@ -22,10 +22,10 @@ IdModule  = IPC7351-Nominal:CAPC2012X70;
 EndCmp
 
 BeginCmp
-TimeStamp = /5525BFB5;
+TimeStamp = /5527C86B;
 Reference = C4;
-ValeurCmp = 10u;
-IdModule  = IPC7351-Nominal:CAPC2012X70;
+ValeurCmp = 1u;
+IdModule  = IPC7351-Nominal:CAPC1608X55;
 EndCmp
 
 BeginCmp
@@ -43,9 +43,9 @@ IdModule  = IPC7351-Nominal:CAPC1005X55;
 EndCmp
 
 BeginCmp
-TimeStamp = /55262082;
+TimeStamp = /5527C979;
 Reference = C7;
-ValeurCmp = 100p;
+ValeurCmp = 1u;
 IdModule  = IPC7351-Nominal:CAPC1608X55;
 EndCmp
 
@@ -57,9 +57,9 @@ IdModule  = IPC7351-Nominal:CAPC1005X55;
 EndCmp
 
 BeginCmp
-TimeStamp = /552627DB;
+TimeStamp = /5527CA73;
 Reference = C9;
-ValeurCmp = 1n;
+ValeurCmp = 1u;
 IdModule  = IPC7351-Nominal:CAPC1608X55;
 EndCmp
 
@@ -80,7 +80,7 @@ EndCmp
 BeginCmp
 TimeStamp = /552501C2;
 Reference = C12;
-ValeurCmp = 15p;
+ValeurCmp = 3p3;
 IdModule  = IPC7351-Nominal:CAPC1005X55;
 EndCmp
 
@@ -113,7 +113,7 @@ IdModule  = IPC7351-Nominal:CAPC2012X70;
 EndCmp
 
 BeginCmp
-TimeStamp = /5524AEF0;
+TimeStamp = /55327178;
 Reference = C17;
 ValeurCmp = 100n;
 IdModule  = IPC7351-Nominal:CAPC1005X55;
@@ -143,7 +143,7 @@ EndCmp
 BeginCmp
 TimeStamp = /55250886;
 Reference = C21;
-ValeurCmp = 15p;
+ValeurCmp = 3p3;
 IdModule  = IPC7351-Nominal:CAPC1005X55;
 EndCmp
 
@@ -162,35 +162,35 @@ IdModule  = IPC7351-Nominal:CAPC1005X55;
 EndCmp
 
 BeginCmp
-TimeStamp = /5528BA82;
+TimeStamp = /5531E5D8;
 Reference = C24;
-ValeurCmp = 10u;
-IdModule  = IPC7351-Nominal:CAPC2012X70;
+ValeurCmp = 1u;
+IdModule  = IPC7351-Nominal:CAPC1608X55;
 EndCmp
 
 BeginCmp
-TimeStamp = /552836CA;
+TimeStamp = /55311EB1;
 Reference = C25;
-ValeurCmp = 10u;
-IdModule  = IPC7351-Nominal:CAPC2012X70;
+ValeurCmp = 100n;
+IdModule  = IPC7351-Nominal:CAPC1005X55;
 EndCmp
 
 BeginCmp
-TimeStamp = /55283DBE;
+TimeStamp = /55311EB9;
 Reference = C26;
-ValeurCmp = 10u;
-IdModule  = IPC7351-Nominal:CAPC2012X70;
+ValeurCmp = 100n;
+IdModule  = IPC7351-Nominal:CAPC1005X55;
 EndCmp
 
 BeginCmp
-TimeStamp = /552B46D5;
+TimeStamp = /55312BBB;
 Reference = C27;
-ValeurCmp = 10u;
-IdModule  = IPC7351-Nominal:CAPC2012X70;
+ValeurCmp = 100n;
+IdModule  = IPC7351-Nominal:CAPC1005X55;
 EndCmp
 
 BeginCmp
-TimeStamp = /552B51C7;
+TimeStamp = /55312BC3;
 Reference = C28;
 ValeurCmp = 100n;
 IdModule  = IPC7351-Nominal:CAPC1005X55;
@@ -281,6 +281,48 @@ IdModule  = IPC7351-Nominal:CAPC1005X55;
 EndCmp
 
 BeginCmp
+TimeStamp = /5527AA84;
+Reference = C41;
+ValeurCmp = 1u;
+IdModule  = IPC7351-Nominal:CAPC1608X55;
+EndCmp
+
+BeginCmp
+TimeStamp = /55312BE7;
+Reference = C42;
+ValeurCmp = 100n;
+IdModule  = IPC7351-Nominal:CAPC1005X55;
+EndCmp
+
+BeginCmp
+TimeStamp = /55312BEF;
+Reference = C43;
+ValeurCmp = 100n;
+IdModule  = IPC7351-Nominal:CAPC1005X55;
+EndCmp
+
+BeginCmp
+TimeStamp = /5530F603;
+Reference = C44;
+ValeurCmp = 47p;
+IdModule  = IPC7351-Nominal:CAPC1005X55;
+EndCmp
+
+BeginCmp
+TimeStamp = /55320375;
+Reference = C45;
+ValeurCmp = 1u;
+IdModule  = IPC7351-Nominal:CAPC1608X55;
+EndCmp
+
+BeginCmp
+TimeStamp = /5531F93D;
+Reference = C46;
+ValeurCmp = 100n;
+IdModule  = IPC7351-Nominal:CAPC1005X55;
+EndCmp
+
+BeginCmp
 TimeStamp = /552567EB;
 Reference = D1;
 ValeurCmp = MBR0540;
@@ -302,9 +344,16 @@ IdModule  = smd-semi:LED-0603;
 EndCmp
 
 BeginCmp
-TimeStamp = /5522A629;
+TimeStamp = /5524FBA8;
+Reference = DS3;
+ValeurCmp = LED;
+IdModule  = smd-semi:LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /55284DC6;
 Reference = DZ1;
-ValeurCmp = SP0503BAHT;
+ValeurCmp = DRTR5V0U2SR;
 IdModule  = smd-semi:SOT-143;
 EndCmp
 
@@ -330,6 +379,27 @@ IdModule  = conn-100mil:CONN-100MIL-M-2x10-SHROUD;
 EndCmp
 
 BeginCmp
+TimeStamp = /55302145;
+Reference = J3;
+ValeurCmp = FLASH;
+IdModule  = conn-molex:CONN-MOLEX-52808-0871;
+EndCmp
+
+BeginCmp
+TimeStamp = /552F8B8A;
+Reference = J4;
+ValeurCmp = JTAG;
+IdModule  = conn-molex:CONN-MOLEX-52808-0871;
+EndCmp
+
+BeginCmp
+TimeStamp = /55293258;
+Reference = JP1;
+ValeurCmp = PROGB;
+IdModule  = ;
+EndCmp
+
+BeginCmp
 TimeStamp = /55256073;
 Reference = L1;
 ValeurCmp = 15uH;
@@ -347,20 +417,6 @@ BeginCmp
 TimeStamp = /552AACB5;
 Reference = Q2;
 ValeurCmp = IRLML6402;
-IdModule  = smd-semi:SOT-23;
-EndCmp
-
-BeginCmp
-TimeStamp = /552AC49C;
-Reference = Q3;
-ValeurCmp = MMBT3906;
-IdModule  = smd-semi:SOT-23;
-EndCmp
-
-BeginCmp
-TimeStamp = /552AFCBD;
-Reference = Q4;
-ValeurCmp = 2N7002;
 IdModule  = smd-semi:SOT-23;
 EndCmp
 
@@ -414,9 +470,9 @@ IdModule  = IPC7351-Nominal:RESC1005X40;
 EndCmp
 
 BeginCmp
-TimeStamp = /552C2CC3;
+TimeStamp = /552D9281;
 Reference = R8;
-ValeurCmp = 1M;
+ValeurCmp = 0R;
 IdModule  = IPC7351-Nominal:RESC1005X40;
 EndCmp
 
@@ -435,23 +491,23 @@ IdModule  = IPC7351-Nominal:RESC1005X40;
 EndCmp
 
 BeginCmp
-TimeStamp = /5524B7E2;
+TimeStamp = /5530D089;
 Reference = R11;
 ValeurCmp = 220k;
 IdModule  = IPC7351-Nominal:RESC1005X40;
 EndCmp
 
 BeginCmp
-TimeStamp = /5524A549;
+TimeStamp = /552C4FEF;
 Reference = R12;
-ValeurCmp = 1k;
+ValeurCmp = 10k;
 IdModule  = IPC7351-Nominal:RESC1005X40;
 EndCmp
 
 BeginCmp
 TimeStamp = /552877DD;
 Reference = R13;
-ValeurCmp = R-0402;
+ValeurCmp = 1M;
 IdModule  = IPC7351-Nominal:RESC1005X40;
 EndCmp
 
@@ -521,49 +577,49 @@ EndCmp
 BeginCmp
 TimeStamp = /55287704;
 Reference = R23;
-ValeurCmp = R-0402;
+ValeurCmp = 200k;
 IdModule  = IPC7351-Nominal:RESC1005X40;
 EndCmp
 
 BeginCmp
-TimeStamp = /552C330B;
+TimeStamp = /552DA13F;
 Reference = R24;
-ValeurCmp = 1M;
+ValeurCmp = 0R;
 IdModule  = IPC7351-Nominal:RESC1005X40;
 EndCmp
 
 BeginCmp
-TimeStamp = /5524AC0D;
+TimeStamp = /552C07FC;
 Reference = R25;
+ValeurCmp = THERM;
+IdModule  = IPC7351-Nominal:RESC2012X50;
+EndCmp
+
+BeginCmp
+TimeStamp = /552DA20D;
+Reference = R26;
+ValeurCmp = 0R;
+IdModule  = IPC7351-Nominal:RESC1005X40;
+EndCmp
+
+BeginCmp
+TimeStamp = /552DA2DD;
+Reference = R27;
+ValeurCmp = 0R;
+IdModule  = IPC7351-Nominal:RESC1005X40;
+EndCmp
+
+BeginCmp
+TimeStamp = /552E11EF;
+Reference = R28;
 ValeurCmp = 1k;
 IdModule  = IPC7351-Nominal:RESC1005X40;
 EndCmp
 
 BeginCmp
-TimeStamp = /552AF082;
-Reference = R26;
-ValeurCmp = 3k3;
-IdModule  = IPC7351-Nominal:RESC1005X40;
-EndCmp
-
-BeginCmp
-TimeStamp = /552AF7B9;
-Reference = R27;
-ValeurCmp = 3k3;
-IdModule  = IPC7351-Nominal:RESC1005X40;
-EndCmp
-
-BeginCmp
-TimeStamp = /552ADB89;
-Reference = R28;
-ValeurCmp = 3k3;
-IdModule  = IPC7351-Nominal:RESC1005X40;
-EndCmp
-
-BeginCmp
-TimeStamp = /552B0372;
+TimeStamp = /552F4DC6;
 Reference = R29;
-ValeurCmp = 3k3;
+ValeurCmp = 1k;
 IdModule  = IPC7351-Nominal:RESC1005X40;
 EndCmp
 
@@ -577,29 +633,78 @@ EndCmp
 BeginCmp
 TimeStamp = /55253EBD;
 Reference = R31;
+ValeurCmp = 1k;
+IdModule  = IPC7351-Nominal:RESC1005X40;
+EndCmp
+
+BeginCmp
+TimeStamp = /5525E30D;
+Reference = R33;
+ValeurCmp = 1k;
+IdModule  = IPC7351-Nominal:RESC1005X40;
+EndCmp
+
+BeginCmp
+TimeStamp = /5524F8D2;
+Reference = R34;
 ValeurCmp = 3k3;
 IdModule  = IPC7351-Nominal:RESC1005X40;
 EndCmp
 
 BeginCmp
-TimeStamp = /55255B43;
-Reference = R32;
-ValeurCmp = 3k3;
+TimeStamp = /552C44EE;
+Reference = R35;
+ValeurCmp = 10k;
 IdModule  = IPC7351-Nominal:RESC1005X40;
 EndCmp
 
 BeginCmp
-TimeStamp = /5522D83F;
+TimeStamp = /55291FC3;
+Reference = TP1;
+ValeurCmp = DONE;
+IdModule  = conn-test:TEST-SMD-SMALL;
+EndCmp
+
+BeginCmp
+TimeStamp = /55290B4C;
+Reference = TP2;
+ValeurCmp = INITB;
+IdModule  = conn-test:TEST-SMD-SMALL;
+EndCmp
+
+BeginCmp
+TimeStamp = /5531670F;
+Reference = TP3;
+ValeurCmp = DONE;
+IdModule  = conn-test:TEST-SMD-SMALL;
+EndCmp
+
+BeginCmp
+TimeStamp = /55316C12;
+Reference = TP4;
+ValeurCmp = DONE;
+IdModule  = conn-test:TEST-SMD-SMALL;
+EndCmp
+
+BeginCmp
+TimeStamp = /55316D0E;
+Reference = TP5;
+ValeurCmp = DONE;
+IdModule  = conn-test:TEST-SMD-SMALL;
+EndCmp
+
+BeginCmp
+TimeStamp = /5526921A;
 Reference = U1;
-ValeurCmp = MCP1700T-3302E/TT;
-IdModule  = smd-semi:SOT-23;
+ValeurCmp = XC3S50-VQ100;
+IdModule  = IPC7351-Nominal:QFP50P1600X1600X100-100;
 EndCmp
 
 BeginCmp
-TimeStamp = /55245D61;
+TimeStamp = /55279178;
 Reference = U2;
-ValeurCmp = SI8645-QSOP;
-IdModule  = IPC7351-Nominal:SOP63P600X160-16;
+ValeurCmp = ADP322ACPZ-145;
+IdModule  = IPC7351-Nominal:QFN50P300X300X100-17;
 EndCmp
 
 BeginCmp
@@ -610,24 +715,24 @@ IdModule  = IPC7351-Nominal:QFN50P900X900X100-65;
 EndCmp
 
 BeginCmp
-TimeStamp = /55266083;
+TimeStamp = /55294D68;
 Reference = U4;
-ValeurCmp = EPM240-TQFP100;
-IdModule  = IPC7351-Nominal:QFP50P1600X1600X160-100;
+ValeurCmp = S25FL204;
+IdModule  = IPC7351-Nominal:SOIC127P600X175-8;
 EndCmp
 
 BeginCmp
-TimeStamp = /5522B9D8;
+TimeStamp = /5531DA18;
 Reference = U5;
-ValeurCmp = MCP1700T-3302E/TT;
-IdModule  = smd-semi:SOT-23;
+ValeurCmp = LTC1844ES5-3.3;
+IdModule  = smd-semi:SOT-23-5;
 EndCmp
 
 BeginCmp
-TimeStamp = /5522BF47;
+TimeStamp = /552A737C;
 Reference = U6;
-ValeurCmp = REE-0505S;
-IdModule  = manuf:RECOM-REE-0505S;
+ValeurCmp = TXB0104RGY;
+IdModule  = manuf:TEXAS-RGY;
 EndCmp
 
 BeginCmp
@@ -635,13 +740,6 @@ TimeStamp = /5522ECB4;
 Reference = U7;
 ValeurCmp = OSC-50MHz;
 IdModule  = manuf:SILABS-DFN-SI501-B;
-EndCmp
-
-BeginCmp
-TimeStamp = /552AA22B;
-Reference = U8;
-ValeurCmp = LTC1844ES5-3.3;
-IdModule  = smd-semi:SOT-23-5;
 EndCmp
 
 BeginCmp
@@ -656,13 +754,6 @@ TimeStamp = /5525568A;
 Reference = U10;
 ValeurCmp = TPS61045DRB;
 IdModule  = IPC7351-Nominal:SON65P300X300X80-9;
-EndCmp
-
-BeginCmp
-TimeStamp = /55246063;
-Reference = U11;
-ValeurCmp = SI8642-QSOP;
-IdModule  = IPC7351-Nominal:SOP63P600X160-16;
 EndCmp
 
 BeginCmp
