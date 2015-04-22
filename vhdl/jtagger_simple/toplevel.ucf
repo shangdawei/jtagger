@@ -1,0 +1,27 @@
+NET "bufoe" LOC = P16;
+NET "clk" LOC = P90;
+
+# PlanAhead Generated physical constraints
+
+NET "ftdi_ac1" LOC = P80;
+NET "ftdi_ac2" LOC = P79;
+NET "ftdi_ad0" LOC = P89;
+NET "ftdi_ad1" LOC = P92;
+NET "ftdi_ad2" LOC = P91;
+NET "ftdi_ad3" LOC = P88;
+NET "ftdi_ad4" LOC = P87;
+NET "ftdi_ad5" LOC = P86;
+NET "ftdi_ad6" LOC = P85;
+NET "ftdi_ad7" LOC = P81;
+NET "iopin_3" LOC = P23;
+NET "iopin_5" LOC = P64;
+NET "iopin_7" LOC = P65;
+NET "iopin_9" LOC = P67;
+NET "iopin_11" LOC = P68;
+NET "iopin_13" LOC = P71;
+NET "iopin_15" LOC = P22;
+NET "iopin_17" LOC = P21;
+NET "iopin_19" LOC = P17;
+NET "tgtsense" LOC = P28;
+NET "vctrl" LOC = P1;
+NET "vppen" LOC = P15;
