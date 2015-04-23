@@ -19,9 +19,7 @@ usage_statistics_webtalk.html
 *_guide.ncd
 *_envsettings.html
 *_bitgen.xwbt
-*.xst
 *.xpi
-*.ut
 *.unroutes
 *.twx
 *.twr
@@ -45,3 +43,4 @@ planAhead_*.debug
 *.xreport
 _xmsgs
 _ngo
+_nog
