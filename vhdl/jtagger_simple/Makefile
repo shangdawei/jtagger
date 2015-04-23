@@ -25,13 +25,14 @@ define echo_greenbold
 	@tput sgr0
 endef
 
-.PHONY: all
+.PHONY: all clean
 
 all: ${TOPLEVEL}.bit
 
 %.ngc: %.xst %.prj ${VHDL}
 	@echo ----
 	$(call echo_cyan,"Performing synthesis...")
+	mkdir -p xst/projnav.tmp
 	${XST} -ifn $< -ofn $(patsubst %.xst,%.syr,$<) | bash ../ise_filter
 	$(call echo_greenbold,"Full report in $(patsubst %.xst,%.syr,$<)")
 
@@ -62,3 +63,36 @@ all: ${TOPLEVEL}.bit
 	@echo ----
 	$(call echo_cyan,"Writing bitfile...")
 	${BITGEN} -f $^ | bash ../ise_filter
+
+clean:
+	rm -fr _nog
+	rm -fr xlnx_auto_0_xdb
+	rm -fr _xmsgs
+	rm -fr xst
+	rm -f ${TOPLEVEL}.bgn
+	rm -f ${TOPLEVEL}_bitgen.xwbt
+	rm -f ${TOPLEVEL}.bld
+	rm -f ${TOPLEVEL}.drc
+	rm -f ${TOPLEVEL}.lso
+	rm -f ${TOPLEVEL}_map.map
+	rm -f ${TOPLEVEL}_map.mrp
+	rm -f ${TOPLEVEL}_map.ncd
+	rm -f ${TOPLEVEL}_map.ngm
+	rm -f ${TOPLEVEL}_map.xrpt
+	rm -f ${TOPLEVEL}_ngdbuild.xrpt
+	rm -f ${TOPLEVEL}.ngr
+	rm -f ${TOPLEVEL}.pad
+	rm -f ${TOPLEVEL}_pad.csv
+	rm -f ${TOPLEVEL}_pad.txt
+	rm -f ${TOPLEVEL}.par
+	rm -f ${TOPLEVEL}_par.xrpt
+	rm -f ${TOPLEVEL}.ptwx
+	rm -f ${TOPLEVEL}_summary.xml
+	rm -f ${TOPLEVEL}.syr
+	rm -f ${TOPLEVEL}.unroutes
+	rm -f ${TOPLEVEL}_usage.xml
+	rm -f ${TOPLEVEL}.xpi
+	rm -f ${TOPLEVEL}_xst.xrpt
+	rm -f usage_statistics_webtalk.html
+	rm -f webtalk.log
+

@@ -44,3 +44,4 @@ planAhead_*.debug
 _xmsgs
 _ngo
 _nog
+pa.fromHdl.tcl
