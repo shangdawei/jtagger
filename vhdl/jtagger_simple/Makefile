@@ -11,6 +11,7 @@ MAP ?= ${XILINX_PREF}/map
 PAR ?= ${XILINX_PREF}/par
 TRCE ?= ${XILINX_PREF}/trce
 BITGEN ?= ${XILINX_PREF}/bitgen
+XC3SPROG ?= xc3sprog
 
 define echo_cyan
 	@tput setaf 6
@@ -25,44 +26,51 @@ define echo_greenbold
 	@tput sgr0
 endef
 
-.PHONY: all clean
+.PHONY: all clean program timing
 
 all: ${TOPLEVEL}.bit
 
 %.ngc: %.xst %.prj ${VHDL}
 	@echo ----
 	$(call echo_cyan,"Performing synthesis...")
-	mkdir -p xst/projnav.tmp
-	${XST} -ifn $< -ofn $(patsubst %.xst,%.syr,$<) | bash ../ise_filter
+	@mkdir -p xst/projnav.tmp
+	@${XST} -ifn $< -ofn $(patsubst %.xst,%.syr,$<) | bash ../ise_filter
 	$(call echo_greenbold,"Full report in $(patsubst %.xst,%.syr,$<)")
 
 %.ngd: %.ngc %.ucf
 	@echo ----
-	$(call echo_cyan,"Generating Native Generic Database...")
-	${NGDBUILD} -dd _nog -nt timestamp -p ${CHIP} -uc $(patsubst %.ngc,%.ucf,$<) $< $@ | bash ../ise_filter
+	$(call echo_cyan,"Translating...")
+	@${NGDBUILD} -dd _nog -nt timestamp -p ${CHIP} -uc $(patsubst %.ngc,%.ucf,$<) $< $@ | bash ../ise_filter
 	$(call echo_greenbold,"Full report in $(patsubst %.ngc,%.bld,$<)")
 
 %.pcf: %.ngd
 	@echo ----
-	$(call echo_cyan,"Map...")
-	${MAP} -p ${CHIP} -cm area -ir off -pr off -c 100 -o $(patsubst %.ngd,%_map.ncd,$<) $< $@ | bash ../ise_filter
+	$(call echo_cyan,"Mapping...")
+	@${MAP} -p ${CHIP} -cm area -ir off -pr off -c 100 -o $(patsubst %.ngd,%_map.ncd,$<) $< $@ | bash ../ise_filter
 	$(call echo_greenbold,"Full report in $(patsubst %.ngd,%_map.mrp,$<)")
 
 %.ncd: %.pcf
 	@echo ----
 	$(call echo_cyan,"PAR...")
-	${PAR} -w -ol std -t 1 $(patsubst %.pcf,%_map.ncd,$<) $@ $< | bash ../ise_filter
+	@${PAR} -w -ol std -t 1 $(patsubst %.pcf,%_map.ncd,$<) $@ $< | bash ../ise_filter
 	$(call echo_greenbold,"Full report in $(patsubst %.pcf,%.par,$<)")
 
 %.twr: %.ucf %.ncd
 	@echo ----
 	$(call echo_cyan,"Timing analysis...")
-	${TRCE} -v 3 -s 4 $(patsubst %.ucf,%.ncd,$<) -o $@ $(patsubst %.ucf,%.pcf,$<) -ucf $< | bash ../ise_filter
+	@${TRCE} -v 3 -s 4 $(patsubst %.ucf,%.ncd,$<) -o $@ $(patsubst %.ucf,%.pcf,$<) -ucf $< | bash ../ise_filter
+	$(call echo_greenbold,"Full report in $@")
+
+timing: ${TOPLEVEL}.twr
+	@less $<
 
 %.bit: %.ut %.ncd
 	@echo ----
 	$(call echo_cyan,"Writing bitfile...")
-	${BITGEN} -f $^ | bash ../ise_filter
+	@${BITGEN} -f $^ | bash ../ise_filter
+
+program: ${TOPLEVEL}.bit cabledb
+	CABLEDB=cabledb ${XC3SPROG} -vc quack $<
 
 clean:
 	rm -fr _nog
